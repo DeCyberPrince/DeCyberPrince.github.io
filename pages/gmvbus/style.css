@@ -1,0 +1,86 @@
+@font-face {
+  font-family: Perfo; /* Гарнитура шрифта */
+  src: url(perfo.ttf); /* Путь к файлу со шрифтом */
+ }
+* {padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Perfo', arial;
+  user-select: none}
+input {display: none;}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 15vh;
+  font-size: 30px;
+}
+.weekend {
+  grid-column: 1 / 3;}
+
+label, .direction_perm, .direction_gamovo, .weekend {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+label {
+  background: #000;
+  color: #4f4f4f;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  color: #db9825;
+  text-shadow: 2px 2px 10px #db9825, -2px -2px 10px #db9825, -2px 2px 10px #db9825, 2px -2px 10px #db9825;
+  transition: 0.3s;
+}
+main {
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(4, 1fr);
+  height: 85vh;
+  background: #000;
+}
+
+.box {
+  font-size: 23px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: #000;
+  color: #4f4f4f;
+  transition: 0.3s;
+}
+
+.box:hover, .aviable:hover, .soonest:hover {
+  animation: whiteBlink 0.3s linear 10 alternate;
+  color: #fff;
+  text-shadow: 2px 2px 10px #fff, -2px -2px 10px #fff, -2px 2px 10px #fff, 2px -2px 10px #fff;
+}
+
+.aviable {
+  transition: 0.3s;
+  color: #db9825;
+  text-shadow: 2px 2px 10px #db9825, -2px -2px 10px #db9825, -2px 2px 10px #db9825, 2px -2px 10px #db9825;
+}
+
+.soonest {
+  transition: 0.3s;
+  color: #26d3b9;
+  text-shadow: 2px 2px 10px #26d3b9, -2px -2px 10px #26d3b9, -2px 2px 10px #26d3b9, 2px -2px 10px #26d3b9;
+}
+
+@keyframes whiteBlink{
+  0% {
+  }
+  100% {
+    color: #fff;
+    font-size: 36px;
+    text-shadow: 2px 2px 10px #fff, -2px -2px 10px #fff, -2px 2px 10px #fff, 2px -2px 10px #fff;
+  }
+}

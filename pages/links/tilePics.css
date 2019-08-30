@@ -1,0 +1,105 @@
+.tileName[data-pic="winUpdate"], .tileContent[data-pic="winUpdate"] {
+    background: url(pics/winUpdate.png) no-repeat;
+    background-size: cover;
+}
+.tileName[data-pic="backup"], .tileContent[data-pic="backup"] {
+    background: url(pics/backup.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="clean"], .tileContent[data-pic="clean"] {
+    background: url(pics/clean.jpeg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="drivers"], .tileContent[data-pic="drivers"] {
+    background: url(pics/drivers.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="browsers"], .tileContent[data-pic="browsers"] {
+    background: url(pics/browsers.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="games"], .tileContent[data-pic="games"] {
+    background: url(pics/games.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="remote"], .tileContent[data-pic="remote"] {
+    background: url(pics/remote.png) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="net"], .tileContent[data-pic="net"] {
+    background: url(pics/net.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="text"], .tileContent[data-pic="text"] {
+    background: url(pics/text.png) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="photo"], .tileContent[data-pic="photo"] {
+    background: url(pics/photo.png) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="video"], .tileContent[data-pic="video"] {
+    background: url(pics/video.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="audio"], .tileContent[data-pic="audio"] {
+    background: url(pics/audio.png) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="torrentportals"], .tileContent[data-pic="torrentportals"] {
+    background: url(pics/torrentportal.jpeg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="films"], .tileContent[data-pic="films"] {
+    background: url(pics/filmsandseries.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="icons"], .tileContent[data-pic="icons"] {
+    background: url(pics/icons.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="google"], .tileContent[data-pic="google"] {
+    background: url(pics/google.png) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="torrent"], .tileContent[data-pic="torrent"] {
+    background: url(pics/torrent.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="education"], .tileContent[data-pic="education"] {
+    background: url(pics/education.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="practice"], .tileContent[data-pic="practice"] {
+    background: url(pics/practice.jpeg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="links"], .tileContent[data-pic="links"] {
+    background: url(pics/usefullinks.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="usbboot"], .tileContent[data-pic="usbboot"] {
+    background: url(pics/flashburn.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="windowsdecor"], .tileContent[data-pic="windowsdecor"] {
+    background: url(pics/windowsdecor.jpg) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="utils"], .tileContent[data-pic="utils"] {
+    background: url(pics/utils.png) no-repeat center;
+    background-size: cover;
+}
+.tileName[data-pic="files"], .tileContent[data-pic="files"] {
+    background: url(pics/files.png) no-repeat center;
+    background-size: cover;
+}
+
+@keyframes prlx {
+    0%{
+        background-position: -100px 0;
+    }
+    100%{
+        background-position: 100px 0;
+    }
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>3&times;3&times;3</title>
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="sidemenu" id="sidemenu">
+    <label for="sidemenu">&#9776;</label>
+    <span id="titleOfPage">3&times;3&times;3</span>
+    <a href="#algorithms"><span>&#10066;</span></a>
+  </header>
+  <aside>
+    <div class="box" id="2x2x2"> <span>2&times;2&times;2</span> </div>
+    <div class="box" id="3x3x3"> <span>3&times;3&times;3</span> </div>
+    <div class="box" id="4x4x4"> <span>4&times;4&times;4</span> </div>
+    <div class="box" id="5x5x5"> <span>5&times;5&times;5</span> </div>
+    <div class="box" id="square_one"> <span>SQUARE ONE</span> </div>
+    <div class="box" id="mirror_blocks"> <span>MIRROR BLOCKS</span> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLNkxn3GUm4UNc6Fjib_9bhbcuSQJEbawA">3&times;3&times;3
+        <br> (CUBEDAY)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLGEUF3GGf-tpnMYCSWaNC1vwR-6vEbAqG">3&times;3&times;3
+        <br> (Максим Чечнев)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/watch?v=RukIJdEiOoI&t=1s&list=PLn3wRIOfkhUnnLgadQ55Kj1lC4QiZ3vMA&index=9">3&times;3&times;3
+        <br> (withcube)</a> </div>
+  </aside>
+  <main>
+    <!-- 
+  <div class="block">
+   <h1 id="title1">TITLE 1</h1> //ID
+    <ul>
+      <li id="tab-1">TAB-1</li> //ID
+      <li id="tab-2">TAB-2</li> //ID
+      <li id="tab-3">TAB-3</li> //ID
+    </ul>
+   <div class="content">
+     <div class="tab-1"> //ID
+       <p>TAB CONTENT 1</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-2"> //ID
+       <p>TAB CONTENT 2</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-3"> //ID
+       <p>TAB CONTENT 3</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+   </div>
+  </div> 
+-->
+    <div class="block">
+      <h1 id="3_cross">Крест</h1>
+      <ul>
+        <li id="3_cross_v1">Способ 1</li>
+        <li id="3_cross_v2">Способ 2</li>
+      </ul>
+      <div class="content">
+        <div class="3_cross_v1">
+          <div class="textPic">
+            <p>Собери белый крест на жёлтом центре</p>
+            <img src="situation_3x3x3/cross_1.png">
+            <p>Совмести синий центр и сине-белое ребро</p>
+            <img src="situation_3x3x3/cross_right.png">
+            <p>Так не правильно</p>
+            <img src="situation_3x3x3/cross_wrong.png">
+            <p>После чего переверни сторону</p>
+            <img src="actions/F2.png">
+            <p>Вот так</p>
+            <img src="situation_3x3x3/cross_one_step.png">
+            <p>После того как проделаешь это со всеми сторонами, должно получиться вот так</p>
+            <img src="situation_3x3x3/cross_full_right.png">
+          </div>
+        </div>
+        <div class="3_cross_v2">
+
+          <div class="textPic">
+            <p>Сoбери белый крест на белом центре</p>
+            <img src="situation_3x3x3/white_cross.png">
+          </div>
+          <p>Возможны три ситуации</p>
+          <div class="textPic">
+            <p> 1. Крест уже собран</p>
+            <img src="situation_3x3x3/cross_full_right.png">
+            <p>2. Не совпадают смежные стороны </p>
+            <img src="situation_3x3x3/white_cross_s1.png">
+          </div>
+          <p> <span>Берем так :совпадают на себя и слева не совпадают справа и сзади</span> </p>
+          <p>После чего делаем <a href="">R U R' U' R</a> </p>
+          <div class="textPic">
+            <p>3. Не совпадают противоположные стороны </p>
+            <img src="situation_3x3x3/white_cross_s2.png">
+            <p>Берем несобранной на себя и <a href="">L2 R2 U2 L2 R2</a> </p>
+            <img src="situation_3x3x3/cross_full_right.png">
+          </div>
+          <p><br> Итог: правильный крест</p>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="block">
+      <h1 id="3_fl">Первый слой</h1>
+      <ul>
+        <li id="3_fl_v1">Способ 1</li>
+
+        <li id="3_fl_v2">Способ 2</li>
+
+      </ul>
+      <div class="content">
+        <div class="3_fl_v1">
+          <p>Ставим сине-красно-белый угол между синей и красной стороной (сине-красными центрами)</p>
+          <p>Если он стоит внизу, то выбиваем его <a href="#pif-paf">пиф-пафом</a></p>
+          <p>Если белым вправо, то 1 <a href="#pif-paf">пиф-паф</a></p>
+          <p>Если белым вверх, то 3 <a href="#pif-paf">пиф-пафа</a></p>
+          <p>Если белым на нас, то 5 <a href="#pif-paf">пиф-пафов</a> или <a href="#pif-paf2">R' F R F'</a> </p>
+        </div>
+        <div class="3_fl_v2">
+
+          <span class="warning">Этот способ предназначен для 2 способа. Этими алгоритмами мы собираем первый слой, не
+            ломая второй.</span>
+          <p>Если белый сверху, то 3 пиф-пафа</p>
+          <p>Если белый справа , то этот <br> <a href="#noname2">алгоритм | no name #2</a> </p>
+          <p>Если белый на нас , то этот <br> <a href="#noname1">алгоритм | no name #1</a> </p>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <h1 id="3_sl">Второй слой</h1>
+      <ul>
+        <li id="3_sl_v1">Способ 1</li>
+        <li id="3_sl_v2">Способ 2</li>
+      </ul>
+      <div class="content">
+        <div class="3_sl_v1">
+          <div class="textPic">
+            <p>Нужно выставить 3 в ряд </p>
+            <img src="situation_3x3x3/3xblue.png">
+            <p>Потом смотрим, куда подходит цвет сверху</p>
+            <img src="situation_3x3x3/sides_ez.png">
+          </div>
+          <p>Если направо , то поворачиваем куб вправо так, чтобы сторона с 3мя в ряд оказалась в правой руке и
+            выполняем этот <a href="#noname3">алгоритм | no name #3</a> </p>
+          <p>Если налево , то поворачиваем куб вправо так, чтобы сторона с 3мя в ряд оказалась в правой руке и
+            выполняем этот <a href="#noname4">алгоритм | no name #4</a> </p>
+        </div>
+        <div class="3_sl_v2">
+          <div class="textPic">
+            <p>Ставим ребро так, чтобы цвет сверху и центр совпадали</p>
+            <img src="situation_3x3x3/sl_m.png">
+          </div>
+          <p>Если слева , то <a href="">L' U L</a> </p>
+          <p>Если справа , то <a href="">R U' R'</a> </p>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <h1 id="3_oll">Третий слой</h1>
+      <h3>OLL</h3>
+      <ul>
+        <li id="3_oll_v1">Способ 1</li>
+        <li id="3_oll_v2">Способ 2</li>
+
+      </ul>
+      <div class="content">
+        <div class="3_oll_v1">
+          <div class="box4sits">
+            <div class="sit" data-id="stick_ez"> <span> Палка </span> <img src="situation_3x3x3/stick.png"> </div>
+            <div class="sit" data-id="galka_ez"> <span> Галка </span> <img src="situation_3x3x3/galka.png"> </div>
+          </div>
+          <div class="textPic">
+            <p>Если ничего нет</p>
+            <img src="situation_3x3x3/nothing.png">
+          </div>
+          <p>То выпоняем <a href="#stick_ez">палку</a> или <a href="#galka_ez">галку</a> </p>
+          <p>Нужно собрать желтую сторону</p>
+          <p>Поворачиваем куб желтой стороной влево , белой - вправо. Смотрим на дальний верхний угол желтой стороны</p>
+          <p>Если желтый сзади , то делаем 2 <a href="#pif-paf">пиф-пафа</a> </p>
+          <p>Если сверху - 4 <a href="#pif-paf">пиф-пафа</a> </p>
+          <p> <span class="warning">Ни в коем случае не крутим сам куб, крутим только желтую сторону</span> </p>
+        </div>
+        <div class="3_oll_v2">
+          <div class="box4sits">
+            <div class="sit" data-id="stick_med">
+              <span>Палка</span>
+              <img src="situation_3x3x3/stick.png">
+            </div>
+            <div class="sit" data-id="galka_med">
+              <span>Галка</span>
+              <img src="situation_3x3x3/galka.png">
+            </div>
+            <div class="sit" data-id="calibri"><span>CALIBRI</span><img src="situation_3x3x3/calibri.png"></div>
+            <div class="sit" data-id="cambria"><span>CAMBRIA</span><img src="situation_3x3x3/cambria.png"></div>
+          </div>
+          <p>Либо у вас одна из этих ситуаций, либо одна из следующих.</p>
+          <p>Если одна из следующих, то ее нужно привести в одну из ситуаций выше: <a href="#calibri">CALIBRI</a> <a
+              href="#cambria">CAMBRIA</a></p>
+          <div class="box4sits">
+
+            <div class="sit" data-id="calibri"><img src="situation_3x3x3/no_lights_ears.png"></div>
+            <div class="sit" data-id="calibri"><img src="situation_3x3x3/eight.png"></div>
+            <div class="sit" data-id="calibri"><img src="situation_3x3x3/no_lights.png"></div>
+            <div class="sit" data-id="calibri"><img src="situation_3x3x3/lights.png"></div>
+            <div class="sit" data-id="calibri"><img src="situation_3x3x3/ears.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="block">
+      <h1 id="3_pll">Третий слой</h1>
+      <h3>PLL</h3>
+      <ul>
+        <li id="3_pll_v1">Способ 1</li>
+        <li id="3_pll_v2">Способ 2</li>
+        <li id="3_pll_v3">Способ 3</li>
+      </ul>
+      <div class="content">
+        <div class="3_pll_v1">
+          <p>Нужно расставить ребра по местам</p>
+          <p> <a href="#noname5">Смежные | no name #5</a> </p>
+          <p> <span class="waring">Брать: собранные слева и сзади, разобранные - на себя и справа</span> </p>
+          <p>Если напротив, то берем несобранными на себя и сзади собранными слева и справа и выполняем <a href="#noname5">смежные
+              | no
+              name #5</a></p>
+          <p>Теперь расставляем углы</p>
+          <p> <span>Берем желтой стороной влево и собранным углом в дальнюю нижнюю часть и выполняем <a href="#noname6">алгоритм
+                | no name #6</a></span> </p>
+          <p>Если собранной части нет , то выполняем <a href="#noname6">алгоритм | no name #6</a> , и она появится</p>
+          <span class="warning">Алгоритм не всегда работает с первого раза, т.к. он простo перемешивает 3 угловых
+            элемента</span>
+        </div>
+        <div class="3_pll_v2">
+          <div class="issue">
+            <img src="situation_3x3x3/fari.png" data-border="none"> = <img data-id="stick_med" src="situation_3x3x3/stick.png">
+            + <img data-id="galka_med" src="situation_3x3x3/galka.png">
+            <br>
+            <img src="situation_3x3x3/no_fari.png" data-border="none"> = <img data-id="galka_med" src="situation_3x3x3/galka.png">
+            + <img data-id="stick_med" src="situation_3x3x3/stick.png">
+          </div>
+          <p>Если ничего нет , то выполняем любой</p>
+
+          <div class="issue">
+            <img data-border="none" src="situation_3x3x3/last_pll_right.png"> = <img data-id="calibri" src="situation_3x3x3/calibri.png">
+            + <img data-id="cambria" src="situation_3x3x3/cambria.png">
+            <img data-border="none" src="situation_3x3x3/last_pll_left.png"> = <img data-id="cambria" src="situation_3x3x3/cambria.png">
+            + <img data-id="calibri" src="situation_3x3x3/calibri.png">
+          </div>
+
+        </div>
+
+
+        <div class="3_pll_v3">
+          <div class="box4sits">
+            <div class="sit" data-id="lambda"> <span>LAMBDA</span> <img src="situation_3x3x3/fari.png"> </div>
+          </div>
+          <P>Если фар нет, то всё равно выполняем, и фары появятся</P>
+          <div class="box4sits">
+            <div class="sit" data-id="noname7">
+              <span> No name #7</span>
+              <img src="situation_3x3x3/last_pll_right.png">
+            </div>
+            <div class="sit" data-id="noname7s">
+              <span>No name #7s</span>
+              <img src="situation_3x3x3/last_pll_left.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="algorithms">Алгоритмы</h2>
+    <div class="algorithm">
+      <h3 id="pif-paf">ПИФ-ПАФ</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="pif-paf2">АНАЛОГ ПИФ-ПАФА #1</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="pif-paf3">ПИФ-ПАФ АНАЛОГ #2</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/D.png"><span>D</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/D'.png"><span>D'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <h2>Первый слой</h2>
+    <div class="algorithm">
+      <h3 id="noname1">NONAME #1 | На нас</h3>
+      <p>Поворачивает верхнуюю правую деталь на -1/3 и ставит ее вниз справа</p>
+      <div class="combo">
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="noname2">NONAME #2 | Справа</h3>
+      <p>Поворачивает верхнуюю правую деталь на +1/3 и ставит ее вниз справа</p>
+      <div class="combo">
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <h2>Второй слой</h2>
+    <div class="algorithm">
+      <h3 id="noname3">NONAME #3 | Налево</h3>
+      <p>Ставит верхнее правое ребро в центр фронтальной части справа</p>
+      <div class="combo">
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="noname4">NONAME #4 | Напрво</h3>
+      <p>Ставит верхнее правое ребро в центр задней части справа</p>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <h2>OLL</h2>
+    <div class="algorithm">
+      <h3 id="stick_ez">ПАЛКА | EASY</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="galka_ez">ГАЛКА | EASY</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="stick_med">ПАЛКА | MEDIUM</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="galka_med">ГАЛКА | MEDIUM</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="calibri">CALIBRI | РЫБКА</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="cambria">CAMBRIA | ПРАВАЯ РЫБКА</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <h2>PLL</h2>
+    <div class="algorithm">
+      <h3 id="noname5">NONAME #5 | РЕБРА</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="noname6">NONAME #6 | УГЛЫ</h3>
+      <p>Желтым влево</p>
+      <div class="combo">
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F2.png"><span>F2</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+        <div class="action"><img src="actions/F2.png"><span>F2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="noname6s">NONAME #6s | УГЛЫ</h3>
+      <p>Конвертировал алгоритм выше так, чтобы желтый был сверху</p>
+      <p>(Угол дальний левый)</p>
+      <div class="combo">
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/D.png"><span>D</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/D'.png"><span>D'</span></div>
+        <div class="action"><img src="actions/F2.png"><span>F2</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/F2.png"><span>F2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="lambda">LAMBDA</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="noname7">NONAME #7 | Ребра</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="noname7s">NONAME #7s | Ребра</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/L2.png"><span>L2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+
+  </main>
+  <footer>
+    <a>
+      <div class="upButton">&#8617;</div>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

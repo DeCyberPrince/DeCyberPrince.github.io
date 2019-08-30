@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>4&times;4&times;4</title>
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="sidemenu" id="sidemenu">
+    <label for="sidemenu">&#9776;</label>
+    <span id="titleOfPage">4&times;4&times;4</span>
+    <a href="#algorithms"><span>&#10066;</span></a>
+  </header>
+  <aside>
+    <div class="box" id="2x2x2"> <span>2&times;2&times;2</span> </div>
+    <div class="box" id="3x3x3"> <span>3&times;3&times;3</span> </div>
+    <div class="box" id="4x4x4"> <span>4&times;4&times;4</span> </div>
+    <div class="box" id="5x5x5"> <span>5&times;5&times;5</span> </div>
+    <div class="box" id="square_one"> <span>SQUARE ONE</span> </div>
+    <div class="box" id="mirror_blocks"> <span>MIRROR BLOCKS</span> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLNkxn3GUm4UNc6Fjib_9bhbcuSQJEbawA">3&times;3&times;3
+        <br> (CUBEDAY)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLGEUF3GGf-tpnMYCSWaNC1vwR-6vEbAqG">3&times;3&times;3
+        <br> (Максим Чечнев)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/watch?v=RukIJdEiOoI&t=1s&list=PLn3wRIOfkhUnnLgadQ55Kj1lC4QiZ3vMA&index=9">3&times;3&times;3
+        <br> (withcube)</a> </div>
+  </aside>
+  <main>
+    <!-- 
+  <div class="block">
+   <h1 id="title1">TITLE 1</h1> //ID
+    <ul>
+      <li id="tab-1">TAB-1</li> //ID
+      <li id="tab-2">TAB-2</li> //ID
+      <li id="tab-3">TAB-3</li> //ID
+    </ul>
+   <div class="content">
+     <div class="tab-1"> //ID
+       <p>TAB CONTENT 1</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-2"> //ID
+       <p>TAB CONTENT 2</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-3"> //ID
+       <p>TAB CONTENT 3</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+   </div>
+  </div> 
+  
+-->
+
+    <div class="block">
+      <h1 id="4_3x3">Приводим в вид 3×3×3</h1>
+
+      <div class="content">
+        <div class="4_3x3_v1">
+          <p>Центры и рёбра собираются интуитивно, но при сборке рёбер может возникнуть ситуация, когда 2 ребра не
+            собраны </p>
+          <div class="textPic">
+            <img src="situation_4x4x4/rebra_two.png">
+            <p>Эту ситуацию нужно привести в <a href="#rebra">REBRA</a> , для этого делаем <a href="#invert">INVERT</a>
+            </p>
+          </div>
+          <span>Объяснение: выгоняем ребро вверх R U R', убираем ребро вбок U' и поворачиваем куб этим ребром к себе
+            лицом, загоняем на место левой рукой</span>
+          <div class="box4sits">
+            <div class="sit" data-id="rebra"><span>REBRA</span><img src="situation_4x4x4/rebra_one.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <h1 id="4_par">Паритеты</h1>
+      <ul>
+        <li id="4_par_oll">OLL</li>
+        <li id="4_par_pll">PLL</li>
+      </ul>
+      <div class="content">
+        <div class="4_par_oll">
+          <div class="box4sits">
+            <div class="sit" data-id="ollpar"><span>OLL Паритет</span><img src="situation_4x4x4/oll_par_one.png"></div>
+            <div class="sit" data-id="ollpar"><span>OLL Паритет</span><img src="situation_4x4x4/oll_par_two.png"></div>
+          </div>
+        </div>
+        <div class="4_par_pll">
+          <div class="box4sits">
+            <div class="sit" data-id="pllpar"><span>OLL Паритет</span><img src="situation_4x4x4/pll_par_one.png"></div>
+            <div class="sit" data-id="pllpar"><span>OLL Паритет</span><img src="situation_4x4x4/pll_par_two.png"></div>
+          </div>
+          <p>Если же равны смежные, то вместо того, чтоб делать 2 раза, можно просто вытащить одну пару, сделать
+            паритет на свободной стороне и венуть пару</p>
+        </div>
+      </div>
+    </div>
+    <h2 id="algorithms">Алгоритмы</h2>
+    <div class="algorithm">
+      <h3 id="invert">INVERT</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="rebra">REBRA</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/Uw.png"><span>Uw</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/Uw'.png"><span>Uw'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="ollpar">OLL ПАРИТЕТ</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/Rw.png"><span>Rw</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/x.png"><span>x</span></div>
+        <div class="action"><img src="actions/Rw.png"><span>Rw</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/Rw.png"><span>Rw</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/Rw'.png"><span>Rw'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/Lw.png"><span>Lw</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/Rw'.png"><span>Rw'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/Rw.png"><span>Rw</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/Rw'.png"><span>Rw'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/Rw'.png"><span>Rw'</span></div>
+      </div>
+
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="pllpar">PLL ПАРИТЕТ</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/Rw2.png"><span>Rw2</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/Rw2.png"><span>Rw2</span></div>
+        <div class="action"><img src="actions/Uw2.png"><span>Uw2</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/Rw2.png"><span>Rw2</span></div>
+        <div class="action"><img src="actions/Uw2.png"><span>Uw2</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+  </main>
+  <footer>
+    <a href="_">
+      <div class="upButton">&#8617;</div>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

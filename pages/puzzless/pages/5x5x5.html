@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>5&times;5&times;5</title>
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="sidemenu" id="sidemenu">
+    <label for="sidemenu">&#9776;</label>
+    <span id="titleOfPage">5&times;5&times;5</span>
+    <a href="#algorithms"><span>&#10066;</span></a>
+  </header>
+  <aside>
+    <div class="box" id="2x2x2"> <span>2&times;2&times;2</span> </div>
+    <div class="box" id="3x3x3"> <span>3&times;3&times;3</span> </div>
+    <div class="box" id="4x4x4"> <span>4&times;4&times;4</span> </div>
+    <div class="box" id="5x5x5"> <span>5&times;5&times;5</span> </div>
+    <div class="box" id="square_one"> <span>SQUARE ONE</span> </div>
+    <div class="box" id="mirror_blocks"> <span>MIRROR BLOCKS</span> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLNkxn3GUm4UNc6Fjib_9bhbcuSQJEbawA">3&times;3&times;3
+        <br> (CUBEDAY)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLGEUF3GGf-tpnMYCSWaNC1vwR-6vEbAqG">3&times;3&times;3
+        <br> (Максим Чечнев)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/watch?v=RukIJdEiOoI&t=1s&list=PLn3wRIOfkhUnnLgadQ55Kj1lC4QiZ3vMA&index=9">3&times;3&times;3
+        <br> (withcube)</a> </div>
+  </aside>
+  <main>
+    <!-- 
+  <div class="block">
+   <h1 id="title1">TITLE 1</h1> //ID
+    <ul>
+      <li id="tab-1">TAB-1</li> //ID
+      <li id="tab-2">TAB-2</li> //ID
+      <li id="tab-3">TAB-3</li> //ID
+    </ul>
+   <div class="content">
+     <div class="tab-1"> //ID
+       <p>TAB CONTENT 1</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-2"> //ID
+       <p>TAB CONTENT 2</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-3"> //ID
+       <p>TAB CONTENT 3</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+   </div>
+  </div> 
+-->
+    <h2>Приводим в вид 3&times;3&times;3</h2>
+
+    <div class="block">
+      <h1 id="5_par">Паритеты</h1>
+      <ul>
+        <li id="5par_2rebra">2 ребра</li>
+        <li id="5par_1rebro">1 ребро</li>
+      </ul>
+      <div class="content">
+        <div class="5par_2rebra">
+          <div class="box4sits">
+            <div class="sit" data-id="climb"><span>CLIMB</span><img src="situation_5x5x5/climb.png"></div>
+            <div class="sit" data-id="rolldown"><span>ROLL DOWN</span><img src="situation_5x5x5/rolldown.png"></div>
+            <div class="sit" data-id="invert"><span>INVERT</span><img src="situation_5x5x5/invert.png"></div>
+            <div class="sit" data-id="flat"><span>FLAT</span><img src="situation_5x5x5/flat.png"></div>
+          </div>
+          <div class="issue">
+            <img data-border="none" src="situation_5x5x5/middle.png"> = <img data-id="climb" src="situation_5x5x5/climb.png">
+            + <img data-id="rolldown" src="situation_5x5x5/rolldown.png">
+          </div>
+        </div>
+        <div class="5par_1rebro">
+          <div class="box4sits">
+            <div class="sit" data-id="sinvert"><span>SINGLE INVERT</span><img src="situation_5x5x5/single_invert.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="algorithms">Алгоритмы</h2>
+    <div class="algorithm">
+      <h3 id="climb">CLIMB</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/5__d.png"><span>d</span></div>
+        <div class="action"><img src="actions/5_R.png"><span>R</span></div>
+        <div class="action"><img src="actions/5_F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/5_U.png"><span>U</span></div>
+        <div class="action"><img src="actions/5_R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/5_F.png"><span>F</span></div>
+        <div class="action"><img src="actions/5__d'.png"><span>d'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="rolldown">ROLL DOWN</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/5__u'.png"><span>u'</span></div>
+        <div class="action"><img src="actions/5_R.png"><span>R</span></div>
+        <div class="action"><img src="actions/5_F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/5_U.png"><span>U</span></div>
+        <div class="action"><img src="actions/5_R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/5_F.png"><span>F</span></div>
+        <div class="action"><img src="actions/5__u.png"><span>u</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="invert">INVERT</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/5__e.png"><span>e</span></div>
+        <div class="action"><img src="actions/5_R.png"><span>R</span></div>
+        <div class="action"><img src="actions/5_F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/5_U.png"><span>U</span></div>
+        <div class="action"><img src="actions/5_R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/5_F.png"><span>F</span></div>
+        <div class="action"><img src="actions/5__e'.png"><span>e'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="flat">FLAT</h3>
+      Тут мы просто перемещаем ребро в другое место и приводим к ситуации <a class="ruru" href="#climb">CLIMB</a> или
+      <a class="ruru" href="#rolldown">ROLL DOWN</a>
+      <div class="combo">
+        <div class="action"><img src="actions/5_R.png"><span>R</span></div>
+        <div class="action"><img src="actions/5_U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/5_B.png"><span>B</span></div>
+        <div class="action"><img src="actions/5__y'.png"><span>y'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="sinvert">SINGLE INVERT</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/5__r2.png"><span>r2</span></div>
+        <div class="action"><img src="actions/5_B2.png"><span>B2</span></div>
+        <div class="action"><img src="actions/5_U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/5__l.png"><span>l</span></div>
+        <div class="action"><img src="actions/5_U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/5__r'.png"><span>r'</span></div>
+        <div class="action"><img src="actions/5_U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/5__r.png"><span>r</span></div>
+        <div class="action"><img src="actions/5_U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/5_F2.png"><span>F2</span></div>
+        <div class="action"><img src="actions/5__r.png"><span>r</span></div>
+        <div class="action"><img src="actions/5_F2.png"><span>F2</span></div>
+        <div class="action"><img src="actions/5__l'.png"><span>l'</span></div>
+        <div class="action"><img src="actions/5_B2.png"><span>B2</span></div>
+        <div class="action"><img src="actions/5__r2.png"><span>r2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    </div>
+
+
+  </main>
+  <footer>
+    <a href="_">
+      <div class="upButton">&#8617;</div>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

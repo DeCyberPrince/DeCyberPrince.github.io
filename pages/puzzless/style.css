@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica";
+}
+
+html {
+  background: #41E9E9;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: 4px solid #00BEBE;
+  color: #00BEBE;
+}
+
+main {
+  display: grid;
+  grid-template: calc(100vw/2) calc(100vw/2) calc(100vw/2) / calc(100vw/2) calc(100vw/2);
+  margin-top: 10%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  
+}
+
+.box span {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 80%;
+  background: #00BEBE;
+  color: #41E9E9;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.box:hover span {
+  background: #6BDEDE;
+  color: #00BEBE;
+  box-shadow: 0 0 10px #00BEBE;
+}
+

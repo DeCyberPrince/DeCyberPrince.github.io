@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>SQUARE ONE</title>
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="sidemenu" id="sidemenu">
+    <label for="sidemenu">&#9776;</label>
+    <span id="titleOfPage">SQUARE ONE</span>
+    <a href="#algorithms"><span></span></a>
+  </header>
+  <aside>
+    <div class="box" id="2x2x2"> <span>2&times;2&times;2</span> </div>
+    <div class="box" id="3x3x3"> <span>3&times;3&times;3</span> </div>
+    <div class="box" id="4x4x4"> <span>4&times;4&times;4</span> </div>
+    <div class="box" id="5x5x5"> <span>5&times;5&times;5</span> </div>
+    <div class="box" id="square_one"> <span>SQUARE ONE</span> </div>
+    <div class="box" id="mirror_blocks"> <span>MIRROR BLOCKS</span> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLNkxn3GUm4UNc6Fjib_9bhbcuSQJEbawA">3&times;3&times;3
+        <br> (CUBEDAY)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLGEUF3GGf-tpnMYCSWaNC1vwR-6vEbAqG">3&times;3&times;3
+        <br> (Максим Чечнев)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/watch?v=RukIJdEiOoI&t=1s&list=PLn3wRIOfkhUnnLgadQ55Kj1lC4QiZ3vMA&index=9">3&times;3&times;3
+        <br> (withcube)</a> </div>
+  </aside>
+  <main>
+    <!-- 
+  <div class="block">
+   <h1 id="title1">TITLE 1</h1> //ID
+    <ul>
+      <li id="tab-1">TAB-1</li> //ID
+      <li id="tab-2">TAB-2</li> //ID
+      <li id="tab-3">TAB-3</li> //ID
+    </ul>
+   <div class="content">
+     <div class="tab-1"> //ID
+       <p>TAB CONTENT 1</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-2"> //ID
+       <p>TAB CONTENT 2</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-3"> //ID
+       <p>TAB CONTENT 3</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+   </div>
+  </div> 
+-->
+
+    <div class="block">
+      <h1 id="sone">Приводим в куб</h1>
+      <div class="content">
+        <div class="sone_cube">
+          <p>Dля этого мы собираем на одной стороне все большие
+            <br> Соответственно все маленькие собираются на другой</p>
+          <span>
+            Собери 3 больших вместе и отправь их влево вниз
+            <br>А потом манипулируй правой и верхней частью <br>
+          </span>
+          <span>
+            В алгоритмах SQUARE ONE <br> Большие части считаются за 2 <br> А маленькие части считаются за 1
+          </span>
+
+          <h2 id="square">Алгоритмы для сборки куба</h2>
+          <div class="algorithm">
+            <h3>8:0</h3>
+            <p class="text">8 маленьких вместе</p>
+            <span class="s_alg">/(-2,4)/(2,1)/(3,3)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>4:4</h3>
+            <p class="text">4 маленьких вместе + 4 маленьких вместе</p>
+            <span class="s_alg">/(2,2)/(0,-1)/(3,3)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>6:2</h3>
+            <p class="text">6 маленьких вместе + 2 маленьких вместе</p>
+            <span class="s_alg">/(-4,-2)/(-1,4)/(-3,0)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>5:3</h3>
+            <p class="text">5 маленьких вместе + 3 маленьких вместе</p>
+            <span class="s_alg"><b>/(4,0)/</b>(1,2)/(3,-2)/(-1,-2)/(0,-3)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>7:1</h3>
+            <p class="text">7 маленьких вместе + 1</p>
+            <span class="s_alg"><b>/(2,0)/</b>(1,2)/(3,-2)/(-1,-2)/(0,-3)/</span>
+          </div> <!-- ALGORITHM -->
+          </details>
+          <div class="algorithm">
+            <h3>Полезный алгоритм</h3>
+            <p class="text">Трансформирует средний слой в куб и обратно</p>
+            <span class="s_alg"><b>/(2,0)/</b>(1,2)/(3,-2)/(-1,-2)/(0,-3)/</span>
+          </div> <!-- ALGORITHM -->
+        </div>
+      </div>
+    </div>
+
+    <h2>Расстанавливаем белый-желтый для больших деталей интуитивно</h2>
+
+    <div class="block">
+      <h1 id="sone_mid">Расстанавливаем белый-желтый для малых деталей</h1>
+      <div class="content">
+        <div class="sone_mid_">
+          <div class="algorithm">
+            <h3>Напротив</h3>
+            <p class="text">Меняет ребра: верхнее и нижнее спереди и сзади</p>
+            <span class="s_alg">(1,0)/(-1,-1)/
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>Рядом</h3>
+            <p class="text">Меняет ребра: правое и заднее снизу на левое и заднее сверху</p>
+            <span class="s_alg">(1,0)/(-3,0)/(-1,-1)/(4,1)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>Напротив</h3>
+            <p class="text">Меняет ребра: переднее сверху на заднее снизу</p>
+            <span class="s_alg">(0,-1)/(-3,0)/(4,1)/(-4,-1)/(3,0)/</span>
+          </div> <!-- ALGORITHM -->
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h1 id="sone_color">Расстановка углов</h1>
+      <div class="content">
+        <div class="sone_color_">
+          <div class="algorithm">
+            <h3>ФАРЫ - ФАРЫ</h3>
+            <p class="text">Если фары сверху и снизу</p>
+            <span class="s_alg">/(-3,0)/(3,3)/(0,-3)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>КОПЬЕ - КОПЬЕ</h3>
+            <p class="text">Если фар нету</p>
+            <span class="s_alg">/(3,-3)/(3,-3)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>ФАРЫ - КОПЬЕ</h3>
+            <p class="text">Если фары</p>
+            <span class="s_alg">/(0,3)/(0,-3)/(0,3)/(0,-3)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>КОПЬЕ- ФАРЫ</h3>
+            <p class="text">Если фары только снизу</p>
+            <span class="s_alg">/(3,0)/(-3,0)/(3,0)/(-3,0)/</span>
+          </div> <!-- ALGORITHM -->
+          <p>
+            Если один слой собран, а на другом фары, то слой с фарами воспринимается как копье , а собранный за фары.
+            Dальше по алгоритму
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h1>Финальное размещение ребер</h1>
+      <div class="content">
+        <div class="sone_corner_">
+
+          <div class="algorithm">
+            <h3>Рядом</h3>
+            <p class="text">Меняет ребра: <span class="ruru">сзади и справа сверху</span> и <span class="ruru">сзади и
+                справа снизу</span></p>
+            <span class="s_alg">(-2,0)/(3,0)/(-1,-1)/(-2,1)/</span>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>Напротив</h3>
+            <p class="text">Меняет ребра: <span class="ruru">спереди и сзади сверху</span> и <span class="ruru">спереди
+                и сзади снизу</span></p>
+            <span class="s_alg">(1,0)/(-1,-1)/(7,0)/(-1,-1)</span>
+            <hr>
+            <p><span class="s_alg">M2 U2 M2</span></p>
+            <p><span class="s_alg">M2 = (1,0)/(-1,-1)/</span></p>
+          </div> <!-- ALGORITHM -->
+          <div class="algorithm">
+            <h3>ПАРИТЕТ</h3>
+            <p class="text">Меняет ребра: <span class="ruru">сзади и справа сверху</span> и <span class="ruru">сзади и
+                справа снизу</span></p>
+            <span class="s_alg">/(3,3)/(1,0)/(-2,-2)/(2,0)/</span>
+            <span class="s_alg">(2,2)/(-1,0)/(-3,-3)/</span>
+            <span class="s_alg">(0,2)/(-2,-2)/</span>
+          </div> <!-- ALGORITHM -->
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+  <footer>
+    <a href="#titleOfPage">
+      <div class="upButton">&#8617;</div>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

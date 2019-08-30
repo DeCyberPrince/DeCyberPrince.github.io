@@ -1,0 +1,54 @@
+main a {
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+main a:hover {
+  text-shadow: 5px 5px 10px #000;
+}
+
+main a:nth-of-type(1), main a:nth-of-type(2) {
+  background: -webkit-gradient(linear, left bottom, left top, from(#009EC3), color-stop(#87D0E1), to(#009EC3));
+  background: linear-gradient(to top, #009EC3, #87D0E1, #009EC3);
+  background-size: 100% 200%;
+  background-position: bottom;
+}
+
+main a:nth-of-type(1):hover, main a:nth-of-type(2):hover {
+  background-position: top;
+}
+
+main a:nth-of-type(3) {
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF7101), color-stop(#87D0E1), to(#FF7101));
+  background: linear-gradient(to top, #FF7101, #87D0E1, #FF7101);
+  background-size: 100% 200%;
+  background-position: bottom;
+}
+
+main a:nth-of-type(3):hover {
+  background-position: top;
+}
+
+main a:nth-of-type(4), main a:nth-of-type(5) {
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF7101), color-stop(#FDB67D), to(#FF7101));
+  background: linear-gradient(to top, #FF7101, #FDB67D, #FF7101);
+  background-size: 100% 200%;
+  background-position: bottom;
+}
+
+main a:nth-of-type(4):hover, main a:nth-of-type(5):hover {
+  background-position: top;
+}
+
+@media screen and (min-width: 1200px) {
+  main[data-adaptive="on"] a:nth-of-type(3) {
+    background: -webkit-gradient(linear, left top, right top, from(#FF7101), color-stop(#87D0E1), to(#FF7101));
+    background: linear-gradient(to right, #FF7101, #87D0E1, #FF7101);
+    background-size: 200% 100%;
+    background-position: right;
+  }
+  main[data-adaptive="on"] a:nth-of-type(3):hover {
+    background-position: left;
+  }
+}
+/*# sourceMappingURL=colors.css.map */

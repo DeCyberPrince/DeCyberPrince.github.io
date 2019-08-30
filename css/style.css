@@ -1,0 +1,160 @@
+@import url(fonts.css);
+@import url(colors.css);
+@import url(media.css);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Livvic";
+}
+
+.pic {
+  position: relative;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-image: url("../pics/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed, fixed;
+  margin-bottom: 30px;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+}
+
+header .name {
+  color: #fff;
+  text-shadow: 3px 3px 5px #000;
+  font-family: 'PermanentMarker';
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header .avatar {
+  height: 30vh;
+  width: 30vh;
+  background: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  -webkit-box-shadow: inset 0 0 0px #fff;
+          box-shadow: inset 0 0 0px #fff;
+  background: url("../pics/avatars/7.jpg") center;
+  background-size: cover;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+
+main a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 12vh;
+  width: 88.125%;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  color: #fff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#009EC3), to(#87D0E1));
+  background: linear-gradient(to top, #009EC3, #87D0E1);
+}
+
+footer {
+  margin: 0 auto;
+  width: 88.125%;
+  text-align: center;
+  font-size: 56px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 15px;
+  margin-bottom: 10%;
+}
+
+footer a {
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+footer a:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.fa-vk {
+  color: #597da3;
+}
+
+.fa-steam-square {
+  color: #171A21;
+}
+
+.fa-twitter {
+  color: #55acee;
+}
+
+.fa-telegram {
+  color: #0088CC;
+}
+
+.fa-instagram {
+  color: #e4405f;
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-envelope-o {
+  color: #D44638;
+}
+
+.fa-envelope {
+  color: #ffdb4d;
+}
+/*# sourceMappingURL=style.css.map */

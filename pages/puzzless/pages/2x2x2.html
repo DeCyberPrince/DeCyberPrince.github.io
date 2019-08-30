@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>2&times;2&times;2</title>
+</head>
+
+<body>
+  <header>
+    <input type="checkbox" name="sidemenu" id="sidemenu">
+    <label for="sidemenu">&#9776;</label>
+    <span id="titleOfPage">2&times;2&times;2</span>
+    <a href="#algorithms"><span>&#10066;</span></a>
+  </header>
+  <aside>
+    <div class="box" id="2x2x2"> <span>2&times;2&times;2</span> </div>
+    <div class="box" id="3x3x3"> <span>3&times;3&times;3</span> </div>
+    <div class="box" id="4x4x4"> <span>4&times;4&times;4</span> </div>
+    <div class="box" id="5x5x5"> <span>5&times;5&times;5</span> </div>
+    <div class="box" id="square_one"> <span>SQUARE ONE</span> </div>
+    <div class="box" id="mirror_blocks"> <span>MIRROR BLOCKS</span> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLNkxn3GUm4UNc6Fjib_9bhbcuSQJEbawA">3&times;3&times;3
+        <br> (CUBEDAY)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/playlist?list=PLGEUF3GGf-tpnMYCSWaNC1vwR-6vEbAqG">3&times;3&times;3
+        <br> (Максим Чечнев)</a> </div>
+    <div class="box"> <a href="https://www.youtube.com/watch?v=RukIJdEiOoI&t=1s&list=PLn3wRIOfkhUnnLgadQ55Kj1lC4QiZ3vMA&index=9">3&times;3&times;3
+        <br> (withcube)</a> </div>
+  </aside>
+  <main>
+    <div class="blackout"></div>
+    <!-- 
+  <div class="block">
+   <h1 id="title1">TITLE 1</h1> //ID
+    <ul>
+      <li id="tab-1">TAB-1</li> //ID
+      <li id="tab-2">TAB-2</li> //ID
+      <li id="tab-3">TAB-3</li> //ID
+    </ul>
+   <div class="content">
+     <div class="tab-1"> //ID
+       <p>TAB CONTENT 1</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-2"> //ID
+       <p>TAB CONTENT 2</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+     <div class="tab-3"> //ID
+       <p>TAB CONTENT 3</p>
+       <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi corporis voluptatum iusto amet sapiente fuga ratione dicta natus officiis. </p>
+     </div>
+   </div>
+  </div> 
+-->
+
+    <div class="block">
+      <h1 id="2_fl">Первый Слой</h1>
+      <ul>
+        <li id="2_fl_v1">Способ 1</li>
+        <li id="2_fl_v2">Способ 2</li>
+      </ul>
+      <div class="content">
+        <div class="2_fl_v1">
+          <p>Просто выполняя алгоритм <a href="#pif-paf">пиф-паф</a></p>
+        </div>
+        <div class="2_fl_v2">
+          <p>Белый справа: 1 <a href="#pif-paf">пиф-паф</a></p>
+          <p>Белый сверху: 3 <a href="#pif-paf">пиф-пафов</a></p>
+          <p>Белый на нас: 5 <a href="#pif-paf">пиф-пафов</a></p>
+          <span>Подсказка: Вместо 5 <a href="#pif-paf">пиф-пафов</a> можно сделать <a href="#pif-paf2">обходной
+              алгоритм</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h1 id="2_oll">Второй слой</h1>
+      <h3>OLL</h3>
+      <ul>
+        <li id="2_oll_v1">Способ 1</li>
+        <li id="2_oll_v2">Способ 2</li>
+        <li id="2_oll_v3">Способ 3</li>
+      </ul>
+      <div class="content">
+        <div class="2_oll_v1">
+          <span class="warning">Прежде чем собирать этот слой, посмотрите PLL этап 1 способа</span>
+          <p>Переверни кубик желтой стороной вниз</p>
+          <p> <span>Поворачивая ТОЛЬКО НИЖНЮЮ ГРАНЬ, выполняй <a href="#pif-paf">пиф-паф</a> в том случае, если ПРАВАЯ
+              НИЖНЯЯ деталь
+              стоит так, что ЖЕЛТЫЙ смотрит НЕ ВНИЗ</span> </p>
+          <p> <a href="#pif-paf">Пиф-пафы</a> делай до тех пор, пока деталь не встанет желтой стороной вниз</p>
+        </div>
+        <div class="2_oll_v2">
+          <div class="box4sits">
+            <div class="sit" data-id="calibri">
+              <span>CALIBRI</span>
+              <img src="situation_2x2x2/calibri.png" alt="">
+            </div>
+            <div class="sit" data-id="calibri">
+              <span>CAMBRIA</span>
+              <img src="situation_2x2x2/cambria.png" alt="">
+            </div>
+          </div>
+          <p>Либо у вас одна из этих ситуаций, либо одна из следующих.</p>
+          <p>Если одна из следующих, то ее нужно привести в одну из ситуаций выше: <a href="#calibri">CALIBRI</a> <a
+              href="#cambria">CAMBRIA</a></p>
+          <div class="box4sits">
+            <div class="sit" data-id="calibri"><span>LIGHTS</span><img src="situation_2x2x2/lights.png"></div>
+            <div class="sit" data-id="calibri"><span>EARS</span><img src="situation_2x2x2/ears.png"></div>
+            <div class="sit" data-id="calibri"><span>EIGHT</span><img src="situation_2x2x2/eight.png"></div>
+            <div class="sit" data-id="calibri"><span>TWO LIGHTS</span><img src="situation_2x2x2/twolights.png"></div>
+            <div class="sit" data-id="calibri"><span>LIGHTS AND EARS</span><img src="situation_2x2x2/ears_lights.png"></div>
+          </div>
+        </div>
+        <div class="2_oll_v3">
+          <div class="box4sits">
+            <div class="sit" data-id="calibri"><span>SUNE</span><img src="situation_2x2x2/calibri.png"></div>
+            <div class="sit" data-id="anti-sune"><span>ANTI-SUNE</span><img src="situation_2x2x2/anti-sune.png"></div>
+            <div class="sit" data-id="headlights"><span>HEADLIGHTS</span><img src="situation_2x2x2/headlights.png"></div>
+            <div class="sit" data-id="chameleon"><span>CHAMELEON</span><img src="situation_2x2x2/chameleon.png"></div>
+            <div class="sit" data-id="diagonal-corners"><span>DIAGONAL CORNERS</span><img src="situation_2x2x2/diagonal_corners.png"></div>
+            <div class="sit" data-id="symmetric"><span>SYMMETRIC</span><img src="situation_2x2x2/symmetric.png"></div>
+            <div class="sit" data-id="non-symmetric"><span>NON-SYMMETRIC</span><img src="situation_2x2x2/non_symmetric.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <h1 id="2_pll">Второй слой</h1>
+      <h3>PLL</h3>
+      <ul>
+        <li id="2_pll_v1">Способ 1</li>
+        <li id="2_pll_v2">Способ 2</li>
+        <li id="2_pll_v3">Способ 3</li>
+      </ul>
+      <div class="content">
+        <div class="2_pll_v1">
+          <div class="box4sits">
+            <div class="sit" data-id="cubeday"><span>CUBEDAY</span><img src="situation_2x2x2/cubeday.png"></div>
+          </div>
+          <p>Если нужно поменять по диагонали, то выполняем <a href="#cubeday">CUBEDAY</a> дважды</p>
+          <p> <span class="warning">Этот алгоритм ломает собранную желтую сторону(OLL), поэтому делайте его раньше, чем
+              OLL этап 1 способа</span> </p>
+        </div>
+        <div class="2_pll_v2">
+          <p> <span>Dля этого случая нужно, чтобы два цвета на одной из сторон совпадали (это называют "фарами")</span>
+          </p>
+          <div class="box4sits">
+            <div class="sit" data-id="lambda"><span>LAMBDA</span><img src="situation_2x2x2/lambda.png"></div>
+          </div>
+          <p>Если "фар" нет, то они должны появиться, если вы сделаете этот алгоритм</p>
+        </div>
+        <div class="2_pll_v3">
+          <div class="box4sits">
+            <div class="sit" data-id="adjacent"><span>ADJACENT</span><img src="situation_2x2x2/adjacent.png"></div>
+            <div class="sit" data-id="diagonal"><span>DIAGONAL</span><img src="situation_2x2x2/diagonal.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 id="algorithms">Алгоритмы</h2>
+    <div class="algorithm">
+      <h3 id="pif-paf">Пиф-паф</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="pif-paf2">АНАЛОГ ПИФ-ПАФА #1</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="calibri">CALIBRI | РЫБКА | SUNE</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="cambria">CAMBRIA</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="anti-sune">ANTI-SUNE</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="headlights">HEADLIGHTS</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="chameleon">CHAMELEON</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="diagonal-corners">DIAGONAL CORNERS</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="symmetric">SYMMETRIC</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="non-symmetric">NON SYMMETRIC</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="cubeday">CUBEDAY</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="lambda">LAMBDA</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F'.png"><span>F'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/F.png"><span>F</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="adjacent">ADJACENT</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U2.png"><span>U2</span></div>
+        <div class="action"><img src="actions/L'.png"><span>L'</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/L.png"><span>L</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+    <div class="algorithm">
+      <h3 id="diagonal">DIAGONAL</h3>
+      <div class="combo">
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/F2.png"><span>F2</span></div>
+        <div class="action"><img src="actions/U'.png"><span>U'</span></div>
+        <div class="action"><img src="actions/R.png"><span>R</span></div>
+        <div class="action"><img src="actions/U.png"><span>U</span></div>
+        <div class="action"><img src="actions/R'.png"><span>R'</span></div>
+        <div class="action"><img src="actions/D.png"><span>D</span></div>
+        <div class="action"><img src="actions/R2.png"><span>R2</span></div>
+      </div>
+    </div> <!-- ALGORITHM -->
+  </main>
+  <footer>
+    <a href="_">
+      <div class="upButton">&#8617;</div>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

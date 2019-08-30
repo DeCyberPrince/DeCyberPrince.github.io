@@ -1,0 +1,67 @@
+@media screen and (min-width: 768px) {
+  header .name {
+    font-size: 2em;
+  }
+  main a {
+    font-size: 1.5em;
+  }
+  footer a.fa {
+    font: normal normal normal 1.5em FontAwesome;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main a {
+    font-size: 1.1em;
+  }
+  footer[data-adaptive="on"] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 30px auto;
+  }
+  footer[data-adaptive="on"] a.fa {
+    font: normal normal normal 1em FontAwesome;
+  }
+  main[data-adaptive="on"] {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    margin: 0 5%;
+  }
+  main[data-adaptive="on"] a:nth-of-type(1) {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  main[data-adaptive="on"] a:nth-of-type(2) {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  main[data-adaptive="on"] a:nth-of-type(3) {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  main[data-adaptive="on"] a:nth-of-type(4) {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 4;
+    grid-column: 4;
+  }
+  main[data-adaptive="on"] a:nth-of-type(5) {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 5;
+    grid-column: 5;
+  }
+}
+/*# sourceMappingURL=media.css.map */
