@@ -1,6 +1,5 @@
-@import url(_fonts.css);
-@import url(_fonts.css);
-@import url(_media.css);
+@import url('_fonts.css');
+@import url('_media.css');
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
