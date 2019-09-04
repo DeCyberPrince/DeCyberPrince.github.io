@@ -1,5 +1,6 @@
 @import url(fonts.css);
 @import url(colors.css);
+@import url(preloader.css);
 
 * {
     margin: 0;
@@ -19,6 +20,7 @@
     background-attachment: fixed, fixed;
     margin-bottom: 30px;
     filter: blur(0px);
+    z-index: -2;
 }
 
 header {
@@ -33,6 +35,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    z-index: -1;
     .name {
         color: #fff;
         text-shadow: 3px 3px 5px #000;

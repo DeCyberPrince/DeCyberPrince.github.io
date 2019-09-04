@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $('#preloader').delay(2000).fadeOut(300);
     var headerH = parseFloat($('header').css('height'));
     var avatar = $('.avatar');
     var label = $('.name');
