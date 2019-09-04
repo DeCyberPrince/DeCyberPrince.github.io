@@ -1,9 +1,7 @@
-@import url('_fonts.css');
 @font-face {
     font-family: LCD;
     src: url(5084.ttf);
 }
-@import url('_media.css');
 @media screen and (min-width: 768px) and (max-width: 1024px){
     header label, .box {
         font-size: 72px;
