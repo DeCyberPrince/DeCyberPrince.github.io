@@ -70,8 +70,7 @@ $(document).ready(function(){
             location.reload();
         } else {
             myTime = now.time.split(':');
-            boxTime = $(this).text().split(':');
-            boxTime[1] = parseFloat(boxTime[1]);
+            boxTime = parseFloat($(this).text().split(':'));
             boxTime = +boxTime[0] * 60 + +boxTime[1];
             myTime = +myTime[0] * 60 + +myTime[1];
             $(this).text(boxTime - myTime + ' m');
