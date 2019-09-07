@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 @import url(_fonts.css);
 @import url(_fonts.css);
 @import url(_media.css);
+=======
+@import url('_fonts.css');
+@import url('_media.css');
+>>>>>>> parent of 19b46cb... littlefix
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
