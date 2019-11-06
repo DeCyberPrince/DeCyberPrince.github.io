@@ -1,0 +1,8 @@
+label span, [data-action="remove"] {
+  cursor: pointer;
+}
+
+[data-content="text"] {
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */
